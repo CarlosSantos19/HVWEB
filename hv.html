@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cómic - Carlos Santos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Bangers', cursive;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .comic-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            background: #00ff41;
+            border: 5px solid #000;
+            padding: 20px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 3px solid #000;
+            z-index: -1;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            color: #000;
+            text-shadow: 4px 4px 0px #0066ff;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            background: #0066ff;
+            color: #00ff41;
+            padding: 10px 20px;
+            display: inline-block;
+            border: 3px solid #000;
+            transform: rotate(-2deg);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .comic-panel {
+            border: 4px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #f0f0f0;
+            position: relative;
+        }
+        
+        .code-panel {
+            background: #1a1a2e;
+            color: #00ff41;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .panel-title {
+            background: #ff006e;
+            color: white;
+            padding: 10px 20px;
+            border: 3px solid #000;
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            transform: skew(-5deg);
+        }
+        
+        .speech-bubble {
+            background: white;
+            border: 3px solid #000;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 15px 0;
+            position: relative;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+        }
+        
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 30px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 20px solid #000;
+        }
+        
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 32px;
+            width: 0;
+            height: 0;
+            border-left: 17px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 17px solid white;
+        }
+        
+        .code-bubble {
+            background: #1a1a2e;
+            color: #00ff41;
+            border: 3px solid #00ff41;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            position: relative;
+        }
+        
+        .code-bubble::before {
+            content: '>';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #00ff41;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        
+        .character {
+            width: 100px;
+            height: 100px;
+            background: #0066ff;
+            border: 3px solid #000;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+        }
+        
+        .character::before {
+            content: '👨‍💻';
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .skill-badge {
+            background: linear-gradient(135deg, #0066ff 0%, #00ff41 100%);
+            color: white;
+            padding: 15px;
+            border: 3px solid #000;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+        }
+        
+        .skill-badge:hover {
+            transform: rotate(2deg) scale(1.1);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #00ff41;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            background: #1a1a2e;
+            color: #00ff41;
+            border: 3px solid #00ff41;
+            padding: 15px;
+            margin-left: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .timeline-item::before {
+            content: '💻';
+            position: absolute;
+            left: -38px;
+            top: 15px;
+            font-size: 24px;
+        }
+        
+        .timeline-item strong {
+            color: #ff006e;
+        }
+        
+        .explosion {
+            background: #ff006e;
+            color: white;
+            padding: 15px;
+            border: 4px solid #000;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+            position: relative;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            padding: 40px;
+        }
+
+        .hero-bubble {
+            background: #fff;
+            border: 4px solid #000;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero-bubble::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 3px solid #000;
+            z-index: -1;
+        }
+
+        .hero-icon {
+            font-size: 80px;
+            flex-shrink: 0;
+        }
+
+        .hero-text {
+            flex: 1;
+            font-size: 22px;
+            font-weight: bold;
+            color: #0066ff;
+            text-align: left;
+            line-height: 1.4;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .hero-text strong {
+            color: #ff006e;
+        }
+        
+        .project-card {
+            background: #f0f0f0;
+            border: 3px solid #000;
+            padding: 15px;
+            margin: 10px 0;
+            position: relative;
+        }
+        
+        .project-card::before {
+            content: '{ }';
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            background: #0066ff;
+            color: white;
+            padding: 5px 15px;
+            border: 2px solid #000;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .project-title {
+            color: #ff006e;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-box {
+            background: #1a1a2e;
+            border: 4px solid #00ff41;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            background: #0066ff;
+            color: white;
+            border: 2px solid #000;
+            padding: 10px 20px;
+            margin: 5px;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .video-card {
+            background: #f0f0f0;
+            border: 3px solid #00ff41;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .video-container {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 10px;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #000;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .comic-page {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="comic-page">
+        <div class="header">
+            <h1>&lt;CARLOS ANDRÉS SANTOS HERNÁNDEZ /&gt;</h1>
+            <div class="subtitle">FULL STACK DEVELOPER</div>
+        </div>
+        
+        <div class="comic-panel">
+            <div class="panel-title">🚀 ORIGIN STORY</div>
+            <div class="character"></div>
+            <div class="speech-bubble">
+                Inicié como <strong>Contador Público</strong>, luego me especialicé en <strong>Animación 3D</strong>, pero descubrí mi verdadera pasión: <strong>¡la programación!</strong> Como <strong>Tecnólogo en Análisis y Desarrollo de Software</strong>, combino estos tres mundos para crear soluciones innovadoras con visión financiera y estética visual.
+            </div>
+            <div class="code-bubble" style="padding-left: 30px;">
+                // Mi superpoder<br>
+                function automatizar() {<br>
+                &nbsp;&nbsp;return "Convertir procesos manuales en código eficiente";<br>
+                }<br><br>
+                console.log("¡Automatización activada! 💪");
+            </div>
+        </div>
+        
+        <div class="comic-panel code-panel">
+            <div class="panel-title">💻 TECH STACK</div>
+            <div class="skills-grid">
+                <div class="skill-badge">JavaScript</div>
+                <div class="skill-badge">TypeScript</div>
+                <div class="skill-badge">Python</div>
+                <div class="skill-badge">Angular</div>
+                <div class="skill-badge">MySQL</div>
+                <div class="skill-badge">Bootstrap</div>
+                <div class="skill-badge">GitHub</div>
+                <div class="skill-badge">Figma</div>
+                <div class="skill-badge">Visual Basic</div>
+            </div>
+        </div>
+        
+        <div class="comic-panel">
+            <div class="panel-title">⚡ PROYECTOS ÉPICOS</div>
+            
+            <div class="project-card">
+                <div class="project-title">🤖 Sistema de Búsqueda Automatizada</div>
+                <p>Desarrollé un sistema que busca automáticamente individuos en plataformas estatales, agilizando el trabajo de contadores y abogados. ¡De horas a segundos!</p>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-title">📄 Generador Masivo de Resoluciones</div>
+                <p>Lideré la automatización para producción masiva y revisión de resoluciones, mejorando la eficiencia operativa del equipo exponencialmente.</p>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-title">🔧 Aplicaciones de Autoservicio</div>
+                <p>Creé múltiples apps que permiten a las entidades ofrecer servicios eficientes dentro de plazos establecidos, facilitando procesos complejos.</p>
+            </div>
+        </div>
+        
+        <div class="comic-panel code-panel">
+            <div class="panel-title">📅 TIMELINE DEV</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Oct 2023 - Feb 2024</strong><br>
+                    &gt; Desarrollo de aplicaciones web full-stack<br>
+                    &gt; Implementación de sistemas de autoservicio<br>
+                    &gt; Optimización de procesos con código limpio
+                </div>
+                <div class="timeline-item">
+                    <strong>Ago 2022 - Oct 2023</strong><br>
+                    &gt; Automatización de procesos con Python y VB<br>
+                    &gt; Desarrollo de scrapers para plataformas estatales<br>
+                    &gt; Líder en proyectos de automatización masiva
+                </div>
+                <div class="timeline-item">
+                    <strong>Formación Académica</strong><br>
+                    &gt; Tecnólogo en Análisis y Desarrollo de Software<br>
+                    &gt; Tecnólogo en Animación 3D<br>
+                    &gt; Contaduría Pública
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-bubble">
+            <div class="hero-icon">🦸‍♂️</div>
+            <div class="hero-text">
+                <strong>MI MISIÓN:</strong><br>
+                Trabajar como DESARROLLADOR creando soluciones innovadoras que combinan <strong>tecnología + datos + automatización</strong>
+            </div>
+        </div>
+
+        <div class="comic-panel">
+            <div class="panel-title">📚 CURSOS & CERTIFICACIONES</div>
+            <div class="project-card">
+                <div class="project-title">🎮 3D & Videojuegos</div>
+                <p>• Modelado Profesional de Personajes Cartoon 3D<br>• 3D Videojuegos</p>
+            </div>
+            <div class="project-card">
+                <div class="project-title">💻 Desarrollo Web & Frameworks</div>
+                <p>• Fundamentos de Angular<br>• Curso Básico JavaScript<br>• Lenguaje de Programación Python</p>
+            </div>
+            <div class="project-card">
+                <div class="project-title">🤖 Inteligencia Artificial</div>
+                <p>• Inteligencia Artificial Aplicada para Resolver Retos Públicos</p>
+            </div>
+            <div class="project-card">
+                <div class="project-title">🎨 Diseño & Marketing</div>
+                <p>• Diseño de Portafolios en Figma<br>• Introducción al Community Management</p>
+            </div>
+            <div class="project-card">
+                <div class="project-title">👨‍🏫 Formación & Pedagogía</div>
+                <p>• Orientar Formación E-learning de acuerdo con procedimientos técnicos y normativa<br>• Orientar Formación Presencial de acuerdo con procedimientos técnicos y normativa</p>
+            </div>
+        </div>
+
+        <div class="comic-panel code-panel">
+            <div class="panel-title">🎬 MIS PROYECTOS EN ACCIÓN</div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" style="width: 100%; height: 100%; border: 2px solid #000;">
+                            <source src="./videos/conjunto.mp4" type="video/mp4">
+                            Tu navegador no soporta el tag de video.
+                        </video>
+                    </div>
+                    <div style="background: #1a1a2e; color: #00ff41; padding: 15px; margin-top: 10px; border: 2px solid #00ff41; border-radius: 5px;">
+                        <h3 style="color: #ff006e; margin-bottom: 10px; font-family: 'Courier New', monospace;">📱 Sistema de Gestión - Conjunto Residencial Aralia de Castilla</h3>
+                        <p style="font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6;">
+                            <strong>Aplicación web completa</strong> con 4 roles diferentes y más de 20 módulos funcionales.<br><br>
+                            <strong>Tech Stack:</strong> Node.js + Express.js, TailwindCSS, MySQL<br>
+                            <strong>Características:</strong> Chat multinivel, Sistema de reservas, Control de parqueaderos, PQRS, Gestión de emprendimientos, Sistema de votaciones
+                        </p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" style="width: 100%; height: 100%; border: 2px solid #000;">
+                            <source src="./videos/restaurante.mp4" type="video/mp4">
+                            Tu navegador no soporta el tag de video.
+                        </video>
+                    </div>
+                    <div style="background: #1a1a2e; color: #00ff41; padding: 15px; margin-top: 10px; border: 2px solid #00ff41; border-radius: 5px;">
+                        <h3 style="color: #ff006e; margin-bottom: 10px; font-family: 'Courier New', monospace;">🍽️ Sistema de Gestión - Lechonería La Final</h3>
+                        <p style="font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6;">
+                            <strong>Sistema completo de restaurante</strong> con reservas de mesas y gestión de pedidos.<br><br>
+                            <strong>Tech Stack:</strong> Node.js + Express, MySQL (AWS RDS), Three.js para visor 3D<br>
+                            <strong>Características:</strong> 13 mesas con estados en tiempo real, Sistema de pedidos con seguimiento, Autenticación segura, Panel de cocina
+                        </p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/5M_xpdvjOms"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            style="width: 100%; height: 100%; border: 2px solid #000;">
+                        </iframe>
+                    </div>
+                    <div style="background: #1a1a2e; color: #00ff41; padding: 15px; margin-top: 10px; border: 2px solid #00ff41; border-radius: 5px;">
+                        <h3 style="color: #ff006e; margin-bottom: 10px; font-family: 'Courier New', monospace;">🎨 Animación 3D</h3>
+                        <p style="font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6;">
+                            <strong>Proyecto de animación 3D</strong> que demuestra habilidades en modelado, texturizado y renderizado.<br><br>
+                            <strong>Tech Stack:</strong> Software de animación 3D profesional<br>
+                            <strong>Características:</strong> Modelado detallado, Iluminación profesional, Renderizado de alta calidad
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comic-panel">
+            <div class="panel-title">🎯 QUÉ PUEDO APORTAR</div>
+            <div class="speech-bubble">
+                ✨ <strong>Mentalidad de solucionador de problemas:</strong> Veo procesos complejos y los convierto en código eficiente<br><br>
+                🚀 <strong>Innovación constante:</strong> Siempre explorando nuevas tecnologías (IA, cloud, frameworks modernos)<br><br>
+                🤝 <strong>Trabajo en equipo:</strong> Comprometido con facilitar la colaboración y el crecimiento organizacional<br><br>
+                💡 <strong>Visión única:</strong> Combino conocimiento financiero con desarrollo para crear soluciones disruptivas
+            </div>
+        </div>
+
+        <div class="comic-panel code-panel">
+            <div class="panel-title">🎮 HOBBIES & PASIONES</div>
+            <div class="skills-grid">
+                <div class="skill-badge">⚽ Fútbol</div>
+                <div class="skill-badge">🛹 Skateboarding</div>
+                <div class="skill-badge">🪗 Acordeón</div>
+                <div class="skill-badge">👨‍👩‍👧‍👦 Familia</div>
+                <div class="skill-badge">📚 Lectura</div>
+                <div class="skill-badge">🔄 Actualización</div>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <div class="contact-item">📧 car-cbs@hotmail.com</div>
+            <div class="contact-item">🐱 github.com/CarlosSantos19</div>
+            <div class="contact-item">📱 +57 321 371 5675</div>
+        </div>
+    </div>
+</body>
+</html>
