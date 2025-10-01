@@ -361,6 +361,140 @@
             border: 2px solid #000;
         }
         
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .comic-page {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+                text-shadow: 2px 2px 0px #0066ff;
+            }
+
+            .subtitle {
+                font-size: 18px;
+                padding: 8px 15px;
+            }
+
+            .panel-title {
+                font-size: 18px;
+                padding: 8px 15px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 10px;
+            }
+
+            .skill-badge {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .video-container {
+                height: 200px;
+            }
+
+            .hero-bubble {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .hero-icon {
+                font-size: 60px;
+            }
+
+            .hero-text {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .speech-bubble {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            .code-bubble {
+                font-size: 12px;
+                padding: 12px;
+            }
+
+            .timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item {
+                font-size: 13px;
+                padding: 12px;
+            }
+
+            .project-card {
+                padding: 12px;
+                margin: 8px 0;
+            }
+
+            .project-title {
+                font-size: 16px;
+            }
+
+            .contact-box {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .contact-item {
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            .explosion {
+                font-size: 16px;
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .panel-title {
+                font-size: 16px;
+            }
+
+            .video-container {
+                height: 180px;
+            }
+
+            .hero-icon {
+                font-size: 50px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media print {
             body {
                 background: white;
