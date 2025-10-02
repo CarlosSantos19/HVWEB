@@ -13,7 +13,7 @@
         
         body {
             font-family: 'Comic Sans MS', 'Bangers', cursive;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
             padding: 20px;
             min-height: 100vh;
         }
@@ -28,7 +28,7 @@
         
         .header {
             text-align: center;
-            background: #00ff41;
+            background: #E8E8E8;
             border: 5px solid #000;
             padding: 20px;
             position: relative;
@@ -49,15 +49,15 @@
         .header h1 {
             font-size: 48px;
             color: #000;
-            text-shadow: 4px 4px 0px #0066ff;
+            text-shadow: 4px 4px 0px #3498DB;
             margin-bottom: 10px;
             font-family: 'Courier New', monospace;
         }
         
         .subtitle {
             font-size: 24px;
-            background: #0066ff;
-            color: #00ff41;
+            background: #3498DB;
+            color: white;
             padding: 10px 20px;
             display: inline-block;
             border: 3px solid #000;
@@ -74,13 +74,13 @@
         }
         
         .code-panel {
-            background: #1a1a2e;
-            color: #00ff41;
+            background: #34495E;
+            color: #2ECC71;
             font-family: 'Courier New', monospace;
         }
         
         .panel-title {
-            background: #ff006e;
+            background: #E74C3C;
             color: white;
             padding: 10px 20px;
             border: 3px solid #000;
@@ -126,22 +126,22 @@
         }
         
         .code-bubble {
-            background: #1a1a2e;
-            color: #00ff41;
-            border: 3px solid #00ff41;
+            background: #34495E;
+            color: #2ECC71;
+            border: 3px solid #2ECC71;
             border-radius: 10px;
             padding: 15px;
             margin: 15px 0;
             font-family: 'Courier New', monospace;
             position: relative;
         }
-        
+
         .code-bubble::before {
             content: '>';
             position: absolute;
             left: 10px;
             top: 10px;
-            color: #00ff41;
+            color: #2ECC71;
             animation: blink 1s infinite;
         }
         
@@ -153,7 +153,7 @@
         .character {
             width: 100px;
             height: 100px;
-            background: #0066ff;
+            background: #3498DB;
             border: 3px solid #000;
             border-radius: 50%;
             display: inline-block;
@@ -178,7 +178,7 @@
         }
         
         .skill-badge {
-            background: linear-gradient(135deg, #0066ff 0%, #00ff41 100%);
+            background: linear-gradient(135deg, #3498DB 0%, #2ECC71 100%);
             color: white;
             padding: 15px;
             border: 3px solid #000;
@@ -206,20 +206,20 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: #00ff41;
+            background: #2ECC71;
         }
         
         .timeline-item {
             position: relative;
             margin-bottom: 20px;
-            background: #1a1a2e;
-            color: #00ff41;
-            border: 3px solid #00ff41;
+            background: #34495E;
+            color: #2ECC71;
+            border: 3px solid #2ECC71;
             padding: 15px;
             margin-left: 10px;
             font-family: 'Courier New', monospace;
         }
-        
+
         .timeline-item::before {
             content: '💻';
             position: absolute;
@@ -227,13 +227,13 @@
             top: 15px;
             font-size: 24px;
         }
-        
+
         .timeline-item strong {
-            color: #ff006e;
+            color: #E74C3C;
         }
         
         .explosion {
-            background: #ff006e;
+            background: #E74C3C;
             color: white;
             padding: 15px;
             border: 4px solid #000;
@@ -278,14 +278,14 @@
             flex: 1;
             font-size: 22px;
             font-weight: bold;
-            color: #0066ff;
+            color: #3498DB;
             text-align: left;
             line-height: 1.4;
             font-family: 'Comic Sans MS', cursive;
         }
 
         .hero-text strong {
-            color: #ff006e;
+            color: #E74C3C;
         }
         
         .project-card {
@@ -301,32 +301,32 @@
             position: absolute;
             top: -15px;
             right: 10px;
-            background: #0066ff;
+            background: #3498DB;
             color: white;
             padding: 5px 15px;
             border: 2px solid #000;
             font-family: 'Courier New', monospace;
         }
-        
+
         .project-title {
-            color: #ff006e;
+            color: #E74C3C;
             font-weight: bold;
             font-size: 18px;
             margin-bottom: 10px;
         }
         
         .contact-box {
-            background: #1a1a2e;
-            border: 4px solid #00ff41;
+            background: #34495E;
+            border: 4px solid #2ECC71;
             padding: 20px;
             margin-top: 20px;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        
+
         .contact-item {
-            background: #0066ff;
+            background: #3498DB;
             color: white;
             border: 2px solid #000;
             padding: 10px 20px;
@@ -344,7 +344,7 @@
 
         .video-card {
             background: #f0f0f0;
-            border: 3px solid #00ff41;
+            border: 3px solid #2ECC71;
             padding: 15px;
             border-radius: 10px;
         }
@@ -495,13 +495,324 @@
             }
         }
 
+        .pdf-download-section {
+            background: white;
+            border: 4px solid #3498DB;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .pdf-download-section h3 {
+            color: #2C3E50;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .pdf-download-section p {
+            color: #34495E;
+            font-size: 18px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+            color: white;
+            padding: 15px 40px;
+            border: 3px solid #000;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+        }
+
+        /* Estilos para la versión PDF */
+        .pdf-only {
+            display: none;
+        }
+
         @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
             body {
                 background: white;
                 padding: 0;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                font-size: 11pt;
+                line-height: 1.4;
             }
+
             .comic-page {
                 box-shadow: none;
+                padding: 15mm 20mm;
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .pdf-only {
+                display: block !important;
+            }
+
+            /* Header profesional */
+            .header {
+                background: #2C3E50;
+                border: none;
+                padding: 15px 20px;
+                margin-bottom: 15px;
+                page-break-after: avoid;
+            }
+
+            .header::before {
+                display: none;
+            }
+
+            .header h1 {
+                color: white;
+                text-shadow: none;
+                font-size: 24pt;
+                font-family: Arial, sans-serif;
+                margin-bottom: 5px;
+            }
+
+            .subtitle {
+                background: transparent;
+                color: white;
+                border: none;
+                transform: none;
+                font-size: 14pt;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            /* Eliminar elementos decorativos */
+            .character {
+                display: none;
+            }
+
+            /* Paneles como secciones limpias */
+            .comic-panel {
+                border: none;
+                background: white;
+                padding: 8px 0;
+                margin-bottom: 10px;
+                page-break-inside: avoid;
+            }
+
+            .code-panel {
+                background: white;
+                color: #2C3E50;
+            }
+
+            /* Títulos de sección profesionales */
+            .panel-title {
+                background: transparent;
+                color: #2C3E50;
+                border: none;
+                border-bottom: 2px solid #3498DB;
+                transform: none;
+                font-size: 14pt;
+                padding: 5px 0;
+                margin-bottom: 8px;
+                font-family: Arial, sans-serif;
+                font-weight: bold;
+            }
+
+            /* Burbujas como párrafos normales */
+            .speech-bubble {
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 0;
+                margin: 8px 0;
+                background: white;
+                font-family: Arial, sans-serif;
+                font-size: 10pt;
+                line-height: 1.4;
+            }
+
+            .speech-bubble::before,
+            .speech-bubble::after {
+                display: none;
+            }
+
+            .code-bubble {
+                background: #F5F5F5;
+                border: 1px solid #DDD;
+                border-radius: 3px;
+                padding: 8px;
+                margin: 8px 0;
+                font-family: 'Courier New', monospace;
+                font-size: 9pt;
+                color: #2C3E50;
+            }
+
+            .code-bubble::before {
+                display: none;
+            }
+
+            /* Skills en formato compacto */
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 6px;
+                margin: 8px 0;
+            }
+
+            .skill-badge {
+                background: #3498DB;
+                transform: none;
+                padding: 4px 8px;
+                font-size: 9pt;
+                border: none;
+                border-radius: 3px;
+                font-family: Arial, sans-serif;
+            }
+
+            /* Timeline compacto */
+            .timeline {
+                padding-left: 0;
+                margin: 8px 0;
+            }
+
+            .timeline::before {
+                display: none;
+            }
+
+            .timeline-item {
+                background: white;
+                border: none;
+                border-left: 3px solid #3498DB;
+                color: #2C3E50;
+                padding: 6px 0 6px 12px;
+                margin-bottom: 8px;
+                font-size: 10pt;
+                font-family: Arial, sans-serif;
+                margin-left: 0;
+            }
+
+            .timeline-item::before {
+                display: none;
+            }
+
+            .timeline-item strong {
+                color: #2C3E50;
+                font-weight: bold;
+            }
+
+            /* Hero bubble como texto destacado */
+            .hero-bubble {
+                background: #F5F5F5;
+                border: 1px solid #DDD;
+                padding: 12px;
+                margin: 10px 0;
+                box-shadow: none;
+                display: block;
+            }
+
+            .hero-bubble::before {
+                display: none;
+            }
+
+            .hero-icon {
+                display: none;
+            }
+
+            .hero-text {
+                color: #2C3E50;
+                font-size: 11pt;
+                text-align: left;
+                font-family: Arial, sans-serif;
+            }
+
+            .hero-text strong {
+                color: #E74C3C;
+            }
+
+            /* Proyectos compactos */
+            .project-card {
+                background: white;
+                border: none;
+                border-left: 3px solid #3498DB;
+                padding: 6px 0 6px 12px;
+                margin: 6px 0;
+                page-break-inside: avoid;
+            }
+
+            .project-card::before {
+                display: none;
+            }
+
+            .project-title {
+                color: #2C3E50;
+                font-weight: bold;
+                font-size: 11pt;
+                margin-bottom: 4px;
+                font-family: Arial, sans-serif;
+            }
+
+            .project-card p {
+                font-size: 10pt;
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            /* Contacto compacto */
+            .contact-box {
+                background: #2C3E50;
+                border: none;
+                padding: 12px;
+                margin-top: 15px;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .contact-item {
+                background: transparent;
+                color: white;
+                border: none;
+                padding: 4px 10px;
+                margin: 2px;
+                font-size: 10pt;
+                font-family: Arial, sans-serif;
+            }
+
+            /* Ocultar elementos no necesarios */
+            .video-grid,
+            .video-card,
+            .explosion {
+                display: none !important;
+            }
+
+            /* Ajustes de página */
+            @page {
+                size: A4;
+                margin: 15mm;
             }
         }
     </style>
@@ -512,7 +823,15 @@
             <h1>&lt;CARLOS ANDRÉS SANTOS HERNÁNDEZ /&gt;</h1>
             <div class="subtitle">FULL STACK DEVELOPER</div>
         </div>
-        
+
+        <div class="pdf-download-section no-print">
+            <h3>📄 ¿Quieres mi Hoja de Vida en PDF?</h3>
+            <p>Descarga mi currículum profesional en formato PDF, listo para imprimir o compartir. Incluye toda mi experiencia, habilidades y proyectos en un formato tradicional de máximo 2 páginas.</p>
+            <a href="./HV/HVPRO FINAL.pdf" download="Carlos_Santos_CV.pdf" class="download-btn">
+                📥 Descargar PDF de mi Hoja de Vida
+            </a>
+        </div>
+
         <div class="comic-panel">
             <div class="panel-title">🚀 ORIGIN STORY</div>
             <div class="character"></div>
@@ -618,7 +937,7 @@
             </div>
         </div>
 
-        <div class="comic-panel code-panel">
+        <div class="comic-panel code-panel no-print">
             <div class="panel-title">🎬 MIS PROYECTOS EN ACCIÓN</div>
             <div class="video-grid">
                 <div class="video-card">
