@@ -815,19 +815,22 @@
                 margin: 15mm;
             }
         }
-    </style>
+            .demo-link { display:inline-block; margin-top:6px; padding:4px 12px; background:#ff006e; color:#fff;
+                     border:2px solid #000; font-weight:bold; text-decoration:none; box-shadow:3px 3px 0 #000; }
+        .demo-link:hover { background:#000; color:#00ff41; }
+</style>
 </head>
 <body>
     <div class="comic-page">
         <div class="header">
             <h1>&lt;CARLOS ANDRÉS SANTOS HERNÁNDEZ /&gt;</h1>
-            <div class="subtitle">FULL STACK DEVELOPER</div>
+            <div class="subtitle">FULL STACK DEVELOPER · CONTADOR PÚBLICO</div>
         </div>
 
         <div class="pdf-download-section no-print">
             <h3>📄 ¿Quieres mi Hoja de Vida en PDF?</h3>
-            <p>Descarga mi currículum profesional en formato PDF, listo para imprimir o compartir. Incluye toda mi experiencia, habilidades y proyectos en un formato tradicional de máximo 2 páginas.</p>
-            <a href="./HV/HVPRO FINAL.pdf" download="Carlos_Santos_CV.pdf" class="download-btn">
+            <p>Descarga mi hoja de vida actualizada (noviembre de 2026), lista para imprimir o compartir: experiencia, proyectos y formación en 2 páginas.</p>
+            <a href="./HV/HV Final Noviembre 2026.pdf" download="Carlos_Santos_HV_2026.pdf" class="download-btn">
                 📥 Descargar PDF de mi Hoja de Vida
             </a>
         </div>
@@ -836,104 +839,143 @@
             <div class="panel-title">🚀 ORIGIN STORY</div>
             <div class="character"></div>
             <div class="speech-bubble">
-                Inicié como <strong>Contador Público</strong>, luego me especialicé en <strong>Animación 3D</strong>, pero descubrí mi verdadera pasión: <strong>¡la programación!</strong> Como <strong>Tecnólogo en Análisis y Desarrollo de Software</strong>, combino estos tres mundos para crear soluciones innovadoras con visión financiera y estética visual.
+                Empecé como <strong>Contador Público</strong>: siete años entre conciliaciones, nóminas y obligaciones ante la DIAN. Luego me formé en <strong>Animación 3D</strong> y en <strong>Análisis y Desarrollo de Software</strong>. Hoy junto esos mundos: construyo aplicaciones web, automatizaciones y herramientas de datos que <strong>entienden el negocio detrás del código</strong>, desde el análisis de requisitos hasta el despliegue en la nube.
             </div>
             <div class="code-bubble" style="padding-left: 30px;">
                 // Mi superpoder<br>
-                function automatizar() {<br>
-                &nbsp;&nbsp;return "Convertir procesos manuales en código eficiente";<br>
+                function automatizar(proceso) {<br>
+                &nbsp;&nbsp;return proceso.manual ? "código eficiente" : "¡ya está listo!";<br>
                 }<br><br>
-                console.log("¡Automatización activada! 💪");
+                console.log("De la factura de la DIAN al asiento contable 💪");
             </div>
         </div>
-        
+
         <div class="comic-panel code-panel">
             <div class="panel-title">💻 TECH STACK</div>
             <div class="skills-grid">
+                <div class="skill-badge">Python</div>
                 <div class="skill-badge">JavaScript</div>
                 <div class="skill-badge">TypeScript</div>
-                <div class="skill-badge">Python</div>
+                <div class="skill-badge">React</div>
+                <div class="skill-badge">Node.js</div>
+                <div class="skill-badge">Flask</div>
                 <div class="skill-badge">Angular</div>
+                <div class="skill-badge">Firebase</div>
+                <div class="skill-badge">Supabase</div>
                 <div class="skill-badge">MySQL</div>
-                <div class="skill-badge">Bootstrap</div>
-                <div class="skill-badge">GitHub</div>
-                <div class="skill-badge">Figma</div>
-                <div class="skill-badge">Visual Basic</div>
+                <div class="skill-badge">Docker</div>
+                <div class="skill-badge">pandas</div>
+                <div class="skill-badge">Selenium</div>
+                <div class="skill-badge">OpenCV</div>
+                <div class="skill-badge">Three.js</div>
+                <div class="skill-badge">Blender</div>
+                <div class="skill-badge">Git · GitHub</div>
+                <div class="skill-badge">IA (Gemini, Claude)</div>
             </div>
         </div>
-        
+
         <div class="comic-panel">
             <div class="panel-title">⚡ PROYECTOS ÉPICOS</div>
-            
+
             <div class="project-card">
-                <div class="project-title">🤖 Sistema de Búsqueda Automatizada</div>
-                <p>Desarrollé un sistema que busca automáticamente individuos en plataformas estatales, agilizando el trabajo de contadores y abogados. ¡De horas a segundos!</p>
+                <div class="project-title">🗳️ Plataforma FNFPCE · Consejo Nacional Electoral</div>
+                <p>Diseñé, desarrollé y desplegué solo la plataforma con la que el Fondo revisa las cuentas de partidos y campañas: 37 módulos, seis roles, alertas de cumplimiento de la Ley 1475 de 2011, clasificador de gastos con aprendizaje automático y descarga masiva de soportes. ¡La usaba a diario la mayoría de los abogados del Fondo!</p>
             </div>
-            
+
             <div class="project-card">
-                <div class="project-title">📄 Generador Masivo de Resoluciones</div>
-                <p>Lideré la automatización para producción masiva y revisión de resoluciones, mejorando la eficiencia operativa del equipo exponencialmente.</p>
+                <div class="project-title">🏘️ RedCity · Red social de barrio</div>
+                <p>Servicios entre vecinos, ventas de garaje, alertas de seguridad y botón SOS, con privacidad por diseño (Ley 1581). App Android en prueba cerrada en Google Play. React, TypeScript y Supabase.</p>
+                <p><a class="demo-link" href="https://carlossantos19.github.io/RedCity/?demo" target="_blank" rel="noopener">▶ Ver demo</a></p>
             </div>
-            
+
             <div class="project-card">
-                <div class="project-title">🔧 Aplicaciones de Autoservicio</div>
-                <p>Creé múltiples apps que permiten a las entidades ofrecer servicios eficientes dentro de plazos establecidos, facilitando procesos complejos.</p>
+                <div class="project-title">🔌 Ruta Eléctrica Colombia</div>
+                <p>Planeador de viajes en carro eléctrico: un algoritmo elige las paradas de carga con el menor tiempo total, con 47 modelos de vehículo y costo estimado.</p>
+                <p><a class="demo-link" href="https://carlossantos19.github.io/ruta-electrica/" target="_blank" rel="noopener">▶ Ver app</a></p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">🧾 Automatización contable · Bendito Contador</div>
+                <p>Bot de descarga masiva de facturas de la DIAN, app de escritorio para la causación automática (gasto, IVA, retención y banco) y procesamiento de egresos y caja menor con OCR.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">🚗 Simulador de carro autónomo</div>
+                <p>Detección de carril con OpenCV, sensor de distancia y planeación de rutas para esquivar obstáculos; código listo para ROS 2 y Raspberry Pi, probado en simulación.</p>
             </div>
         </div>
-        
+
         <div class="comic-panel code-panel">
             <div class="panel-title">📅 TIMELINE DEV</div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <strong>Oct 2023 - Feb 2024</strong><br>
-                    &gt; Desarrollo de aplicaciones web full-stack<br>
-                    &gt; Implementación de sistemas de autoservicio<br>
-                    &gt; Optimización de procesos con código limpio
+                    <strong>Nov 2025 - Sep 2026 · CNE</strong><br>
+                    &gt; Desarrollador de la Plataforma FNFPCE<br>
+                    &gt; Python (Flask), Node.js, Firebase, IA y análisis de datos
                 </div>
                 <div class="timeline-item">
-                    <strong>Ago 2022 - Oct 2023</strong><br>
-                    &gt; Automatización de procesos con Python y VB<br>
-                    &gt; Desarrollo de scrapers para plataformas estatales<br>
-                    &gt; Líder en proyectos de automatización masiva
+                    <strong>Jun 2025 - Dic 2025 · Bendito Contador (remoto)</strong><br>
+                    &gt; Automatizaciones contables con Python, Selenium y OCR
+                </div>
+                <div class="timeline-item">
+                    <strong>Nov 2024 - Dic 2024 · CNE</strong><br>
+                    &gt; App de gestión de archivos contables y legales con Firestore
+                </div>
+                <div class="timeline-item">
+                    <strong>Oct 2023 - Feb 2024 · CNE (Técnico Operativo)</strong><br>
+                    &gt; Bots de búsqueda en plataformas estatales<br>
+                    &gt; Automatización masiva de resoluciones
+                </div>
+                <div class="timeline-item">
+                    <strong>2021 - 2025 · Desarrollador independiente</strong><br>
+                    &gt; Conjunto Aralia de Castilla, Lechona de la Abuela y sitios web
+                </div>
+                <div class="timeline-item">
+                    <strong>2009 - 2016 · Contabilidad</strong><br>
+                    &gt; Audilatina, Solo Sierras, IAC, Asiscoop y Progas
                 </div>
                 <div class="timeline-item">
                     <strong>Formación Académica</strong><br>
-                    &gt; Tecnólogo en Análisis y Desarrollo de Software<br>
-                    &gt; Tecnólogo en Animación 3D<br>
-                    &gt; Contaduría Pública
+                    &gt; Tecnólogo en Análisis y Desarrollo de Software (SENA, 2025)<br>
+                    &gt; Contador Público, tarjeta profesional vigente (Los Libertadores, 2014)<br>
+                    &gt; Tecnólogo en Animación 3D (SENA, 2021)
                 </div>
             </div>
         </div>
-        
+
         <div class="hero-bubble">
             <div class="hero-icon">🦸‍♂️</div>
             <div class="hero-text">
                 <strong>MI MISIÓN:</strong><br>
-                Trabajar como DESARROLLADOR creando soluciones innovadoras que combinan <strong>tecnología + datos + automatización</strong>
+                Crear software que la gente de verdad use, uniendo <strong>tecnología + datos + automatización + conocimiento contable</strong>
             </div>
         </div>
 
         <div class="comic-panel">
             <div class="panel-title">📚 CURSOS & CERTIFICACIONES</div>
             <div class="project-card">
-                <div class="project-title">🎮 3D & Videojuegos</div>
-                <p>• Modelado Profesional de Personajes Cartoon 3D<br>• 3D Videojuegos</p>
+                <div class="project-title">🧪 En curso</div>
+                <p>• Scrum y pruebas de software (SENA, 2026)</p>
             </div>
             <div class="project-card">
                 <div class="project-title">💻 Desarrollo Web & Frameworks</div>
-                <p>• Fundamentos de Angular<br>• Curso Básico JavaScript<br>• Lenguaje de Programación Python</p>
+                <p>• Lenguaje de Programación Python, 50 h (MinTIC y Universidad Distrital)<br>• Curso Básico de JavaScript y Fundamentos de Angular (Platzi)</p>
             </div>
             <div class="project-card">
                 <div class="project-title">🤖 Inteligencia Artificial</div>
-                <p>• Inteligencia Artificial Aplicada para Resolver Retos Públicos</p>
+                <p>• Inteligencia Artificial Aplicada para Resolver Retos Públicos (MinTIC, Gobierno Digital)</p>
+            </div>
+            <div class="project-card">
+                <div class="project-title">🎮 3D & Videojuegos</div>
+                <p>• Modelado 3D para videojuegos, 40 h (SENA)<br>• Modelado profesional de personajes cartoon 3D (Domestika)</p>
             </div>
             <div class="project-card">
                 <div class="project-title">🎨 Diseño & Marketing</div>
-                <p>• Diseño de Portafolios en Figma<br>• Introducción al Community Management</p>
+                <p>• Diseño de portafolios en Figma<br>• Introducción al community management (Domestika)</p>
             </div>
             <div class="project-card">
                 <div class="project-title">👨‍🏫 Formación & Pedagogía</div>
-                <p>• Orientar Formación E-learning de acuerdo con procedimientos técnicos y normativa<br>• Orientar Formación Presencial de acuerdo con procedimientos técnicos y normativa</p>
+                <p>• Competencias laborales SENA: orientar formación e-learning (nivel avanzado) y formación presencial (nivel básico)</p>
             </div>
         </div>
 
@@ -950,9 +992,9 @@
                     <div style="background: #1a1a2e; color: #00ff41; padding: 15px; margin-top: 10px; border: 2px solid #00ff41; border-radius: 5px;">
                         <h3 style="color: #ff006e; margin-bottom: 10px; font-family: 'Courier New', monospace;">📱 Sistema de Gestión - Conjunto Residencial Aralia de Castilla</h3>
                         <p style="font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6;">
-                            <strong>Aplicación web completa</strong> con 4 roles diferentes y más de 20 módulos funcionales.<br><br>
-                            <strong>Tech Stack:</strong> Node.js + Express.js, TailwindCSS, MySQL<br>
-                            <strong>Características:</strong> Chat multinivel, Sistema de reservas, Control de parqueaderos, PQRS, Gestión de emprendimientos, Sistema de votaciones
+                            <strong>Aplicación web completa</strong> con 4 roles: residente, administrador, vigilante y alcaldía.<br><br>
+                            <strong>Tech Stack:</strong> Node.js + Express, Firebase, TailwindCSS y app móvil en Flutter<br>
+                            <strong>Características:</strong> Chat entre residentes, reservas con calendario, sorteo de 100 parqueaderos, control de vehículos y paquetería, PQRS y notificaciones
                         </p>
                     </div>
                 </div>
@@ -965,11 +1007,11 @@
                         </video>
                     </div>
                     <div style="background: #1a1a2e; color: #00ff41; padding: 15px; margin-top: 10px; border: 2px solid #00ff41; border-radius: 5px;">
-                        <h3 style="color: #ff006e; margin-bottom: 10px; font-family: 'Courier New', monospace;">🍽️ Sistema de Gestión - Lechonería La Final</h3>
+                        <h3 style="color: #ff006e; margin-bottom: 10px; font-family: 'Courier New', monospace;">🍽️ Sistema para restaurante - Lechona de la Abuela</h3>
                         <p style="font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6;">
                             <strong>Sistema completo de restaurante</strong> con reservas de mesas y gestión de pedidos.<br><br>
-                            <strong>Tech Stack:</strong> Node.js + Express, MySQL (AWS RDS), Three.js para visor 3D<br>
-                            <strong>Características:</strong> 13 mesas con estados en tiempo real, Sistema de pedidos con seguimiento, Autenticación segura, Panel de cocina
+                            <strong>Tech Stack:</strong> Node.js + Express, MySQL, Three.js para el visor 3D del menú<br>
+                            <strong>Características:</strong> Mesas con estado en tiempo real, pedidos con seguimiento, vista de cocina, chat y pago por Nequi
                         </p>
                     </div>
                 </div>
@@ -988,33 +1030,33 @@
                         <h3 style="color: #ff006e; margin-bottom: 10px; font-family: 'Courier New', monospace;">🎨 Animación 3D</h3>
                         <p style="font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6;">
                             <strong>Proyecto de animación 3D</strong> que demuestra habilidades en modelado, texturizado y renderizado.<br><br>
-                            <strong>Tech Stack:</strong> Software de animación 3D profesional<br>
-                            <strong>Características:</strong> Modelado detallado, Iluminación profesional, Renderizado de alta calidad
+                            <strong>Tech Stack:</strong> Blender y Maya<br>
+                            <strong>Características:</strong> Modelado detallado, iluminación y renderizado
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="comic-panel">
             <div class="panel-title">🎯 QUÉ PUEDO APORTAR</div>
             <div class="speech-bubble">
-                ✨ <strong>Mentalidad de solucionador de problemas:</strong> Veo procesos complejos y los convierto en código eficiente<br><br>
-                🚀 <strong>Innovación constante:</strong> Siempre explorando nuevas tecnologías (IA, cloud, frameworks modernos)<br><br>
-                🤝 <strong>Trabajo en equipo:</strong> Comprometido con facilitar la colaboración y el crecimiento organizacional<br><br>
-                💡 <strong>Visión única:</strong> Combino conocimiento financiero con desarrollo para crear soluciones disruptivas
+                ✨ <strong>Producto de punta a punta:</strong> del análisis de requisitos al despliegue en la nube, solo o en equipo<br><br>
+                🧾 <strong>Visión contable y normativa:</strong> traduzco procesos financieros, tributarios y electorales en software que la gente adopta<br><br>
+                🤖 <strong>Automatización e IA:</strong> bots, OCR, análisis de datos y modelos de lenguaje integrados en productos reales<br><br>
+                🧪 <strong>Mejora continua:</strong> hoy me formo en Scrum y pruebas de software para trabajar con más calidad en equipo
             </div>
         </div>
 
         <div class="comic-panel code-panel">
             <div class="panel-title">🎮 HOBBIES & PASIONES</div>
             <div class="skills-grid">
+                <div class="skill-badge">🪗 Acordeón</div>
+                <div class="skill-badge">🎵 Música original</div>
                 <div class="skill-badge">⚽ Fútbol</div>
                 <div class="skill-badge">🛹 Skateboarding</div>
-                <div class="skill-badge">🪗 Acordeón</div>
                 <div class="skill-badge">👨‍👩‍👧‍👦 Familia</div>
                 <div class="skill-badge">📚 Lectura</div>
-                <div class="skill-badge">🔄 Actualización</div>
             </div>
         </div>
 
